@@ -9,18 +9,68 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+
+
+//upper case, lower case, special characters, and number variables 
+var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X','Y', 'Z'];
+var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x','y', 'z'];
+var spcChoice = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+'];
+var numsChoice = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+var charset = [];
+var answer = ""; 
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);{}
+
+window.onload=alert("Click Generate Password to begin.");
 function generatePassword(){
 
 //8-128 characters length choice variable
 var lengthChoice = prompt(" Please choose a length between 8-128 characters.")
+console.log(lengthChoice);
+if (lengthChoice < 8 || lengthChoice > 128){
+    generatePassword()
+}
 
-//upper case, lower case, special characters, and number variables 
-var upperChoice = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X','Y', 'Z'];
-var lowerChoice = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x','y', 'z'];
-var spcChoice = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+'];
-var numsChoice = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+//uppercase variable
+var upperCase = window.confirm("Would you like your password to include upper case letters?");
+if (upperCase === true){
+    charset =+ upperCase
+    console.log(charset)
+}else if (upperCase === false){
+    charset;
+    console.log(charset)
+}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//lowercase variable
+var lowerCase = window.confirm("Would you like your password to include lower case letters?");
+if (lowerCase === true){
+    charset =+ lowerCase
+    console.log(charset)
+}else if (lowerCase === false){
+    charset;
+    console.log(charset)
+}
+
+//Special Characters variable
+var spcChoice = window.confirm("Would you like your password to include special charcters?");
+if (spcChoice === true){
+    charset =+ spcChoice
+    console.log(charset)
+}else if (spcChoice === false){
+    charset;
+    console.log(charset)
+}
+
+//numbers variable
+var numsChoice = window.confirm("Would you like your password to include numbers?");
+if (numsChoice === true){
+    charset =+ numsChoice
+    console.log(charset)
+}else if (numsChoice === false){
+    charset;
+    console.log(charset)
+}
 
 }
