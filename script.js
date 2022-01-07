@@ -23,9 +23,10 @@ generateBtn.addEventListener("click", writePassword);{}
 
 window.onload=alert("Click Generate Password to begin.");
 function generatePassword(){
+var password = []; 
 
 //8-128 characters length choice variable
-var lengthChoice = prompt(" Please choose a length between 8-128 characters.")
+var lengthChoice = parseInt(prompt("What length would you like for the password?"));
 console.log(lengthChoice);
 if (lengthChoice < 8 || lengthChoice > 128){
     generatePassword()
@@ -73,6 +74,6 @@ if (numsChoice === true){
 
 for (i = 0; i< lengthChoice; i++){
     passwordCharset = Math.floor(Math.random() + answer.lengthChoice)
-    return answer.lengthChoice
+    return "password";
 }
 }
