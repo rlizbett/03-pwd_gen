@@ -23,7 +23,7 @@ generateBtn.addEventListener("click", writePassword);{}
 
 window.onload=alert("Click Generate Password to begin.");
 function generatePassword(){
-var password = ""; 
+var password = "";
 
 //8-128 characters length choice variable
 var lengthChoice = parseInt(prompt("What length would you like for the password?"));
