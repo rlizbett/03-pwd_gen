@@ -34,7 +34,7 @@ if (lengthChoice < 8 || lengthChoice > 128){
 //uppercase variable
 var upperCase = window.confirm("Would you like your password to include upper case letters?");
 if (upperCase === true){
-    charset =+ upperCase
+    charset.push(upperCase)
     console.log(charset)
 }else if (upperCase === false){
     charset = charset.concat(other_array)
@@ -44,7 +44,7 @@ if (upperCase === true){
 //lowercase variable
 var lowerCase = window.confirm("Would you like your password to include lower case letters?");
 if (lowerCase === true){
-    charset =+ lowerCase
+    charset.push(lowerCase)
     console.log(charset)
 }else if (lowerCase === false){
     charset = charset.concat(other_array)
@@ -54,7 +54,7 @@ if (lowerCase === true){
 //Special Characters variable
 var spcChoice = window.confirm("Would you like your password to include special charcters?");
 if (spcChoice === true){
-    charset =+ spcChoice
+    charset.push(spcChoice)
     console.log(charset)
 }else if (spcChoice === false){
     charset = charset.concat(other_array)
@@ -64,7 +64,7 @@ if (spcChoice === true){
 //numbers variable
 var numsChoice = window.confirm("Would you like your password to include numbers?");
 if (numsChoice === true){
-    charset =+ numsChoice
+    charset.push(numsChoice)
     console.log(charset)
 }else if (numsChoice === false){
     charset = charset.concat(other_array)
@@ -72,7 +72,7 @@ if (numsChoice === true){
 }
 
 for (i = 0; i< lengthChoice; i++){
-    passwordcharset = Math.floor(Math.random() * answer.length)
-    return answer.join
+    passwordCharset = Math.floor(Math.random() + answer.lengthChoice)
+    return answer.lengthChoice
 }
 }
