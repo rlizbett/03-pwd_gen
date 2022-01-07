@@ -3,12 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
   
-}
+    passwordText.value = password;
+  
+  }
 
 //upper case, lower case, special characters, and number variables 
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X','Y', 'Z'];
@@ -37,7 +37,7 @@ if (upperCase === true){
     charset =+ upperCase
     console.log(charset)
 }else if (upperCase === false){
-    charset;
+    charset = charset.concat(other_array)
     console.log(charset)
 }
 
@@ -47,7 +47,7 @@ if (lowerCase === true){
     charset =+ lowerCase
     console.log(charset)
 }else if (lowerCase === false){
-    charset;
+    charset = charset.concat(other_array)
     console.log(charset)
 }
 
@@ -57,7 +57,7 @@ if (spcChoice === true){
     charset =+ spcChoice
     console.log(charset)
 }else if (spcChoice === false){
-    charset;
+    charset = charset.concat(other_array)
     console.log(charset)
 }
 
@@ -67,18 +67,12 @@ if (numsChoice === true){
     charset =+ numsChoice
     console.log(charset)
 }else if (numsChoice === false){
-    charset;
+    charset = charset.concat(other_array)
     console.log(charset)
 }
 
 for (i = 0; i< lengthChoice; i++){
     passwordcharset = Math.floor(Math.random() * answer.length)
-    return answer
-}
-
-function writePassword() {
-    var password = generatePassword();
-    var passwordText= document.querySelector("#password");
-    passwordText.value = password;
+    return answer.join
 }
 }
