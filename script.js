@@ -7,10 +7,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  
 }
-
-
 
 //upper case, lower case, special characters, and number variables 
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X','Y', 'Z'];
@@ -73,4 +71,14 @@ if (numsChoice === true){
     console.log(charset)
 }
 
+for (i = 0; i< lengthChoice; i++){
+    passwordcharset = Math.floor(Math.random() * answer.length)
+    return answer
+}
+
+function writePassword() {
+    var password = generatePassword();
+    var passwordText= document.querySelector("#password");
+    passwordText.value = password;
+}
 }
