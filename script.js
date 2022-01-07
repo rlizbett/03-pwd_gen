@@ -23,54 +23,37 @@ generateBtn.addEventListener("click", writePassword);{}
 
 window.onload=alert("Click Generate Password to begin.");
 function generatePassword(){
-var password = []; 
+var password = ""; 
 
 //8-128 characters length choice variable
 var lengthChoice = parseInt(prompt("What length would you like for the password?"));
 console.log(lengthChoice);
 if (lengthChoice < 8 || lengthChoice > 128){
-    generatePassword()
-}
+    generatePassword()}
 
 //uppercase variable
 var upperCase = window.confirm("Would you like your password to include upper case letters?");
 if (upperCase === true){
     charset.push(upperCase)
-    console.log(charset)
-}else if (upperCase === false){
-    charset = charset.concat(other_array)
-    console.log(charset)
-}
+    console.log(charset)}
 
 //lowercase variable
 var lowerCase = window.confirm("Would you like your password to include lower case letters?");
 if (lowerCase === true){
     charset.push(lowerCase)
-    console.log(charset)
-}else if (lowerCase === false){
-    charset = charset.concat(other_array)
-    console.log(charset)
-}
+    console.log(charset)}
 
 //Special Characters variable
 var spcChoice = window.confirm("Would you like your password to include special charcters?");
 if (spcChoice === true){
     charset.push(spcChoice)
-    console.log(charset)
-}else if (spcChoice === false){
-    charset = charset.concat(other_array)
-    console.log(charset)
-}
+    console.log(charset)}
 
 //numbers variable
 var numsChoice = window.confirm("Would you like your password to include numbers?");
 if (numsChoice === true){
     charset.push(numsChoice)
-    console.log(charset)
-}else if (numsChoice === false){
-    charset = charset.concat(other_array)
-    console.log(charset)
-}
+    console.log(charset)}
 
 for (i = 0; i< lengthChoice; i++){
     passwordCharset = Math.floor(Math.random() + answer.lengthChoice)
